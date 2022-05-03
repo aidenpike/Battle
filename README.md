@@ -13,7 +13,6 @@
 
 ## To Do 
 - Armor System
-    - Base 10 Defense (You have to go through it first)
     - Repair Armor/Toughen Action
         - 1-2 armor restored
         - Maximum of 10 (for now)  
