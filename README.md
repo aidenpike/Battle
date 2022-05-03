@@ -13,9 +13,7 @@
 
 ## To Do 
 - Armor System
-    - Repair Armor/Toughen Action
-        - 1-2 armor restored
-        - Maximum of 10 (for now)  
+    - Base 10 Defense (You have to go through it first)  
     - Fully Repair Armor: Takes 2 turns but fully restores armor
 - Defend Action
     - Half Damage of incoming attack
