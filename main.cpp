@@ -84,7 +84,9 @@ void playerOneMath(){
             playerTwoHealth = playerTwoHealth - playerDamage; 
         }
     }
-    else if (playerOneOption == 2)
+    else if (playerOneOption == 2) {
+        
+    }
 }
 
 void playerTwoMath(){    
