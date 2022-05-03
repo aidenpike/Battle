@@ -64,16 +64,18 @@ void titleScreen(){
             "_MMMMMMM9' `YMMM9'Yb.YMMM9  YMMM9 _MM_ YMMMM9  Y89 " << endl;
 }
 
+//Player One Actions and Math
 void playerOneMath(){    
     cout << "[" << playerOneName << "] (Armor: " << playerOneArmor << "/10 | HP: " << playerOneHealth << "/10)" << endl;
     
     int playerDamage = 1 + rand() % (3 + 1 - 1);
     int playerRepair = 1 + rand() % (2 + 1 - 1);
     
-    cout << "\t1. Attack\n\t2. Repair Armor";
+    cout << "\t1. Attack\n\t2. Repair Armor\n";
     cin >> playerOneOption;
 
     //Change to switch if options > 2
+    //Attack
     if (playerOneOption == 1){
         cout << playerOneName << " did " << playerDamage << " damage!" << endl;
         
@@ -84,18 +86,30 @@ void playerOneMath(){
             playerTwoHealth = playerTwoHealth - playerDamage; 
         }
     }
-    else if (playerOneOption == 2)
+    //Repair
+    else if (playerOneOption == 2){
+        cout << playerOneName << " repaired their armor by " << playerRepair << " points!" << endl;
+        if (playerOneArmor < 10){
+            playerOneArmor = playerOneArmor + playerRepair;
+
+            if (playerOneArmor > 10)
+                playerOneArmor = 10;
+        }
+    }  
 }
 
+//Player Two Actions and Math
 void playerTwoMath(){    
     cout << "[" << playerTwoName << "] (Armor: " << playerTwoArmor << "/10 | HP: " << playerTwoHealth << "/10)" << endl;
     
     int playerDamage = 1 + rand() % (3 + 1 - 1);
-
-    cout << "\t1. Attack\n\t2. Repair Armor";
+    int playerRepair = 1 + rand() % (2 + 1 - 1);
+    
+    cout << "\t1. Attack\n\t2. Repair Armor\n";
     cin >> playerTwoOption;
 
     //Change to switch if options > 2
+    //Attack
     if (playerTwoOption == 1){ 
         cout << playerTwoName << " did " << playerDamage << " damage!" << endl;
 
@@ -106,11 +120,22 @@ void playerTwoMath(){
             playerOneHealth = playerOneHealth - playerDamage;
         }
     }
+    //Repair Armor
+    else if (playerTwoOption == 2){
+        cout << playerTwoName << " repaired their armor by " << playerRepair << " points!" << endl;
+        if (playerTwoArmor < 10){
+            playerTwoArmor = playerTwoArmor + playerRepair;
+
+            if (playerTwoArmor > 10)
+                playerTwoArmor = 10;
+        }
+    }
 }
 
+//Check who won
 void winner(){
     if (playerOneHealth > 0 && playerTwoHealth <= 0)
-        cout << "Player One wins!" << endl;
+        cout << playerOneName << " wins!" << endl;
     else if (playerTwoHealth > 0 && playerOneHealth <= 0)
-        cout << "Player Two wins!" << endl;
+        cout << playerTwoName << " wins!" << endl;
 }
