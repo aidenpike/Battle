@@ -12,8 +12,5 @@
     - PvE
 
 ## To Do 
-- Armor System
-    - Base 10 Defense (You have to go through it first)  
-    - Fully Repair Armor: Takes 2 turns but fully restores armor
 - Defend Action
     - Half Damage of incoming attack
