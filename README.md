@@ -14,3 +14,4 @@
 ## To Do 
 - Defend Action
     - Half Damage of incoming attack
+- Turn-based fighting instead of just looping it
