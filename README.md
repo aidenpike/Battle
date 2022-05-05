@@ -1,7 +1,11 @@
 # Battle!
 2 player battle game.
 
-## Possible Additions
+## To Do
+- Turn-based fighting
+- math.h
+    - P1 Math & Functions
+    - P2 Math & Functions
 - Loadout Choices
 - Attack Speed Stat
 - Spells
@@ -11,7 +15,8 @@
     - Team Battle
     - PvE
 
-## To Do 
-- Defend Action
-    - Half Damage of incoming attack
-- Turn-based fighting instead of just looping it
+## main.cpp
+Runs the loop and player functions from objects.
+
+## math.h
+The class and functions of the game, the backbone.
